@@ -14,8 +14,17 @@
                     }
                 }
 
-                function
+                function verifypassword()
 
+
+
+
+
+                var myinput = document.getElementById("psw")
+                var letter = document.getElementById("letter")
+                var capital = document.getElementById("capital")
+                var number = document.getElementById("number")
+                var length = document.getElementById("length")
 
 
 
@@ -27,16 +36,25 @@
         
                 <h2 class="text-white flex items-center justify-center w-12/12 p-10 text-4xl font-sans">Create an Account</h2>
 
-        <form class="flex items-center justify-center w-12/12 p-8" name="myform" action="/action_page.php" onsumbmit="return validateform()"
+        <form class="flex items-center justify-center flex-col w-12/12 p-8" name="myform" action="/action_page.php" onsumbmit="return validateform()"
         method="post">
-        Email: <input type="text" name="fname" required>
-        <input type="submit" value="Submit">
+                <label for="usrname">Username</label>
+                <input type="text" name="fname">
 
+                 <label for="psw">Password:</label>
+                 <input type="password" id="psw" name="psw" title="Must contain atleast one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+             
+                <input type="submit" value="Submit">
 
+        </form>
 
+        <div id="message">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">A <b>lowercase letter</b></p>
+            <p id="capital" class="invalid">A <b>uppercase letter</b></p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Password <b>must 8 or more characters long</b></p>
 
-
-
-    </form>
+        </div>
     </body>
 </html>
