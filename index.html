@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
         <link href="https://cdn.jsdelivr.net/npm/daisyui@2.42.1/dist/full.css"/>
-        <script src="https://cdn.tailwindcss.com"></script>
-    </header>
-    <body>
+        <script src="https://cdn.tailwindcss.com"></script> 
+    </head>  
+        <script>
+            
+                function validateform() {
+                    let x = document.forms["myform"]["fname"].value;
+                    if (x =="") {
+                        alert("name msut be filled out");
+                        return false;
+                    }
+                }
+
+                function
 
 
 
 
 
 
+        </script>
+     <body>
+        <body class="h-screen bg-slate-600">
+        
+                <h2 class="text-white flex items-center justify-center w-12/12 p-10 text-4xl font-sans">Versus Intrest form</h2>
+
+        <form class="flex items-center justify-center w-12/12 p-8" name="myform" action="/action_page.php" onsumbmit="return validateform()"
+        method="post">
+        Email: <input type="text" name="fname">
+        <input type="submit" value="Submit">
 
 
 
 
 
 
-
-
-
-
-
-
-
-
+    </form>
     </body>
 </html>
