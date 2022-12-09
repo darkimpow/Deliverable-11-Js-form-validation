@@ -12,15 +12,14 @@
              <h2 class="text-white flex items-center justify-center w-12/12 p-10 text-4xl font-sans">Create an Account</h2>
 
         <form class="flex items-center justify-center flex-col w-12/12 p-8" name="myform" action="/action_page.php" onsumbmit="return validateform()"
-        method="post">
+                 method="post">
                 <label for="usrname">Username</label>
                 <input type="text" name="fname">
 
                  <label for="psw">Password:</label>
                  <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                  <input type="submit" value="Submit">
-
-        </form>
+         </form>
 
         </div>
     </body>
