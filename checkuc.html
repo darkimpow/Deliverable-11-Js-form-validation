@@ -5,7 +5,7 @@
     <body>
         <div>
             <input id="psw">
-            <button onclick="checkLC()">cHECK</button>
+            <button onclick="checkLC()">Submit</button>
         </div>
         <div id="capital"></div>
         <div id="messageLC"></div>
@@ -27,12 +27,14 @@ function checkLC() {
     let lowercasepattern=/[a-z]/g;
     let pswvalue = document.getElementById('psw').value ;
     let answerLC = lowercasepattern.test(pswvalue) ;
+    
     document.getElementById('messageLC').innerHTML = answerLC;
 }
 function checkNB() {
     let numberpattern=/[0-9]/g;
     let pswvalue = document.getElementById('psw').value ;
     let answerNB = numberpattern.test(pswvalue) ;
+
     document.getElementById('messageNB').innerHTML = answerNB;
 }
         </script>
