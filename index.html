@@ -25,10 +25,18 @@
                <input class="text-black rounded-lg" type="text" name="fname" value="">
 
                 <label for="psw">Password:</label>
-                <input class="text-black rounded-lg" type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <input class="text-black rounded-lg" type="password" id="psw" name="psw" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                 <input class="rounded-lg hover:bg-blue-600" type="submit">
 
             </form>
+
+        <div id="message">
+            <h3>Password Must contain The following</h3>
+            <p id="letter"  class="invalid">A <b>Lowercase</b>letter</p>
+            <p id="Capital" class="invalid">A<b>Capital</b>letter</p>
+            <p id="number"  class="invalid">A<b>Number</b></p>
+            <p id="Length"  class="invalid">Minimum <b>8 characters</b></p>
+        </div>
        
 
    </body>

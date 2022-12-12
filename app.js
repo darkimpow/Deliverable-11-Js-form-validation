@@ -1,32 +1,49 @@
-function validateform() {
-    let x = document.forms["myform"]["fname"].value;
-    if (x =="") {
-        alert("name msut be filled out");
-        return false;
-    }
+var myinput= document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+ 
+
+// validate lowercase letters 
+var lowerCaseLetters=/[a-z]/g;
+
+if(myinput.value.match(lowerCaseLetters)){
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+} else{
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
 }
 
-function verifypassword() {
-    var psw = document.getElementById("psw").value;
-    
-}
-function lowercase(){
-    var letter = document.getElementById("letter").value;
-}
-function capital(){
-    var capital= document.getElementById("capital").value;
+// validate Uppercase letters 
+var UpperCaseLetters=/[A-Z]/g;
+
+if(myinput.value.match(UpperCaseLetters)){
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+} else{
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
 }
 
-function number(){
-    var number= document.getElementById("number").value;
+//validate Numbers
+var numbers=/[0-9]/g;
+
+if(myinput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+} else{
+    number.classList.remove("valid");
+    number.classList.remove("invalid");
 }
 
-function length(){
-    var length= document.getElementById("length").value;
+//validate Length
+if(myinput.value.length >=8) {
+    length.classList.remove("invalid");
+    length.classList.add("invalid");
+} else{
+    length.classList.remove("valid");
+    length.classList.add("invalid")
 }
-
-var myinput= document.getElementById("psw")
-var letter = document.getElementById("letter")
-var capital = document.getElementById("capital")
-var number = document.getElementById("number")
-var length = document.getElementById("length")
