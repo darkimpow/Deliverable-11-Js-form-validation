@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.42.1/dist/full.css"/>
         <script src="https://cdn.tailwindcss.com"></script> 
         <script src="app.js"></script>
         <video autoplay loop muted class="absolute -z-50 w-auto min-w-full min-h-full max-w-none">
@@ -23,11 +22,11 @@
            <form class="flex items-center justify-center text-white rounded-lg flex-col w-12/12 p-8 font-serif" name="myform" action="/action_page.php" onsumbmit="return validateform()"
                 method="post">
                <label for="usrname">Username</label>
-               <input type="text" name="fname">
+               <input class="text-black rounded-lg" type="text" name="fname" value="">
 
                 <label for="psw">Password:</label>
-                <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-                <input class="rounded-lg hover:bg-blue-600" type="submit" value="Submit">
+                <input class="text-black rounded-lg" type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <input class="rounded-lg hover:bg-blue-600" type="submit">
 
             </form>
        
